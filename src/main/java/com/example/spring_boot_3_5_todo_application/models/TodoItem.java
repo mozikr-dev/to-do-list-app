@@ -17,7 +17,7 @@ public class TodoItem implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String description;
-    private Boolean isCompleted;
+    private Boolean isComplete;
 
     private Instant createdAt;
     private Instant updatedAt;
@@ -25,8 +25,8 @@ public class TodoItem implements Serializable {
 
     @Override
     public String toString(){
-        return String.format("TodoItem{id=%d, description = '%s', isCompleted ='%s', createdAt = '%s', updatedAt = '%s'}",
-                id, description, isCompleted, createdAt, updatedAt);
+        return String.format("TodoItem{id=%d, description = '%s', isComplete ='%s', createdAt = '%s', updatedAt = '%s'}",
+                id, description, isComplete, createdAt, updatedAt);
     }
 
 }
